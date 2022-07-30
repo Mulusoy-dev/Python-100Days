@@ -22,7 +22,7 @@ np_multi=np_array.reshape(2,2)                         # reshape(2,2) 2x2 tipind
 
 
 np_arr=np.arange(1,10)                                 # arange(1,10) 1'den 9'a kadar yazdırır
-np_arr2=np.arange(10,100,3)                            # arange(10,100,3) 10'dan 97'e kadar 3'er 3'er artar
+np_arr2=np.arange(10,100,3)                            # arange(10,100,3) 10'dan 'e kadar 3'er 3'er artar
 np_arr3=np.zeros(10)                                   # zeros(10) 10 tane 0 yazdırır
 np_arr4=np.ones(10)                                    # ones(10) 10 tane 1 yazdırır
 np_arr5=np.linspace(0,100,5)                           # 0 ile 100 arasını 5 eşit parçaya böler. [0 25 50 75 100]
@@ -30,6 +30,8 @@ np_arr5=np.linspace(0,100,5)                           # 0 ile 100 arasını 5 e
 print(np_arr5)
 
 
+# np.vstack() metodu vertical(dikey) olarak matrisleri birleştirir
+# np.hstack() metodu horizontal(yatay) olarak matrisleri birleştirir
 
 
 
