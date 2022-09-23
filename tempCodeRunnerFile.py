@@ -1,1 +1,2 @@
-
+except IndexError:
+#     print(None)
