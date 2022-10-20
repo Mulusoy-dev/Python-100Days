@@ -83,7 +83,7 @@ def main():
     temp = df["Alış"].to_dict()[0]
     print(temp)
     print("----------------------------------------------------")
-    time.sleep(40)
+    time.sleep(65)
     Workbook.Save()
 
 
