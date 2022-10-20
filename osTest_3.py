@@ -5,6 +5,29 @@ import win32com.client
 import datetime
 import subprocess
 
+###########################################################################################
+
+
+def ISAGRAF_open():
+    global open_program
+    prog = r"C:/Program Files (x86)/Dev-Cpp/devcpp.exe"
+    try:
+        # 'DEBUG' mouse clicking  
+        open_program = subprocess.Popen([prog])
+        time.sleep(2)
+    except Exception as e:
+        print(e)
+
+
+def ISAGRAF_close():
+    prog = r"C:/Program Files (x86)/Dev-Cpp/devcpp.exe"
+    try:
+        open_program.terminate()
+        time.sleep(2)
+    except Exception as e:
+        print(e)
+
+##########################################################################################
 
 
 def win32_module():
@@ -40,11 +63,14 @@ def same_value():
     if df["Alış"].to_dict()[0] == temp:
         print("Values are equal. Program should be restart.")
         print(temp)
-        stopfile()                           # Program closed and wait operation
-        win32_module()                       # Program restart
+        time.sleep(2)
+        ISAGRAF_close()                      # ISAGRAF closed and 2 sec wait
+        stopfile()                           # Excel Program is closed and 2 sec wait 
+
+        ISAGRAF_open()                       # ISAGRAF restarted and 2 sec wait
+        win32_module()                       # Excel Program is restarted
     else:
         print("Successful")
-
         
 
         
@@ -57,26 +83,22 @@ def main():
     temp = df["Alış"].to_dict()[0]
     print(temp)
     print("----------------------------------------------------")
-    time.sleep(70)
+    time.sleep(40)
     Workbook.Save()
 
 
 
 
-
+ISAGRAF_open()
 win32_module()
 
 
 
-
-# is_same = True
 while True:
-    # win32_module()
+    
+    
     main()
     same_value()
 
  
     
-
-
-
