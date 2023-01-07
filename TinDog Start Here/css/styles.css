@@ -14,7 +14,7 @@ body {
 
 h1 {
   font-family: 'Montserrat', sans-serif;
-  font-style: 3rem;
+  font-style: 3.5rem;
   line-height: 1.5
 }
 
@@ -38,3 +38,17 @@ h1 {
   font-size: 1.2rem;
   font-family: "Montserrat-Light";
 }
+
+
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+/* Title Images */
+.title-image {
+  width: 40%;
+  transform: rotate(25deg);
+}
+
+
+
