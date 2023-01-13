@@ -1,3 +1,7 @@
+
+
+
+
 body {
   font-family: "Montserrat";
 }
@@ -134,3 +138,26 @@ p {
   padding: 3% 2%;
 }
 
+
+#cta {
+  background-color: #ff4c68;
+  color: #fff;
+  padding: 5%;
+  text-align: center;
+}
+
+.cta-heading{
+  font-family: 'Montserrat';
+  line-height: 1.5;
+  font-size: 3rem;
+}
+
+
+#footer {
+  padding: 3% 15%;
+  text-align: center;
+}
+
+.social-icon {
+  margin: 20px 10px;
+}
