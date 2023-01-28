@@ -2045,12 +2045,29 @@
         </div>
       </div>
 
+      <br><br>
+
+
+      <!-- ToolTips -->
+      <button id="btnShow" class="btn btn-danger">Show</button>
+      <button id="btnHide" class="btn btn-danger">Hide</button>
+      <button id="btnToggle" class="btn btn-danger">Toggle</button>
+
+      <br><br>
+      
+
+      <button id="btn1" type="button" class="btn btn-primary" data-bs-toggle="tooltip" title="tooltip text">Tooltip Text</button>
+      <button id="btn2" type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-html="true" title="<h1>tooltip text</h1><p>lorem ipsum</p>">Tooltip Html</button>
+
+      <br><br>
 
 
 
 
+      <!-- Popovers -->
+      
 
-
+      
 
 
 
@@ -2075,6 +2092,28 @@
             bsAlert.close();
         }, 2000);
         
+        var btn=document.getElementById('btn1');
+        const btnTooltip1 = new bootstrap.Tooltip(btn);
+
+        var btn=document.getElementById('btn2');
+        const btnTooltip2 = new bootstrap.Tooltip(btn);
+
+
+        document.getElementById('btnShow').addEventListener('click', function() {
+            btnTooltip1.show();
+            btnTooltip2.show();
+        });
+        
+        document.getElementById('btnHide').addEventListener('click', function() {
+            btnTooltip1.hide();
+            btnTooltip2.hide();
+        });
+
+        document.getElementById('btnToggle').addEventListener('click', function() {
+            btnTooltip1.toggle();
+            btnTooltip2.toggle();
+        });
+
 
     </script>
 </body>
